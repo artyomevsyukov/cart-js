@@ -10,7 +10,6 @@ const Product = ({
   decrease,
 }) => {
   const { img, title, priceTotal, count, id } = product;
-  // console.log(product);
   return (
     <section className="product">
       <div className="product__img">
