@@ -2,7 +2,13 @@ import ButtonDelete from "../ButtonDelete";
 import Count from "../Count";
 import "./style.scss";
 
-const Product = ({ product, deleteProduct, increase, decrease }) => {
+const Product = ({
+  product,
+  deleteProduct,
+  increase,
+  changeValue,
+  decrease,
+}) => {
   const { img, title, priceTotal, count, id } = product;
   // console.log(product);
   return (
@@ -12,7 +18,13 @@ const Product = ({ product, deleteProduct, increase, decrease }) => {
       </div>
       <div className="product__title">{title}</div>
       <div className="product__count">
-        <Count count={count} increase={increase} decrease={decrease} id={id} />
+        <Count
+          count={count}
+          increase={increase}
+          decrease={decrease}
+          changeValue={changeValue}
+          id={id}
+        />
       </div>
       <div className="product__price">{priceTotal} руб.</div>
       <div className="product__controls">
